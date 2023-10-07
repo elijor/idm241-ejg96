@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+.whole-container {
+    display: flex;
+    width: 90%;
+    margin: 10% auto;
+    flex-direction: column;
+}
+.urlholder, .con h1 {
+    text-align: center;
+}
+
+.trfl {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}
+
+.con {
+    width: 25%;
+    border-style: solid;
+    border-color: dimgray;
+    padding: 20px;
+}

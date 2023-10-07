@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Alpha</title>
+  </head>
+  <body>
+    <div class="whole-container">
+        <img src="imgs/idm241-image1.png" alt="this image shows three product tiles with red outlines pointing out interactive elements">
+        <img src="imgs/idm241-image2.png" alt="this image shows the quick shop modal red outlines pointing out interactive elements">
+        <div class="urlholder">
+           <h1> <a target="_blank" href="https://www.urbanoutfitters.com/mens-jackets"> https://www.urbanoutfitters.com/mens-jackets </a></h1>
+        </div>
+        <div class="trfl">
+            <div class="con">
+                <h1>
+                    Triggers
+                </h1>
+                <ul>
+                    <li>
+                        User hovers on or off of product image tile
+                    </li>
+                    <li>
+                        User hovers on or off color option
+                    </li>
+                    <li>
+                        User hovers quick shop button
+                    </li>
+                    <li>
+                        User clicks quick shop button
+                    </li>
+                    <li>
+                        User clicks a color option
+                    </li>
+                    <li>
+                        User clicks on exit quick shop modal
+                    </li>
+                    <li>
+                        User hovers on quick shop modal buttons
+                    </li>
+                    <li>
+                        User hovers on favorite button
+                    </li>
+                    <li>
+                        User clicks on favorite button
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Rules
+                </h1>
+                <p>
+                    <b>
+                        User hovers on or off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image quickly slides simultaneously while another image takes its place
+                    </li>
+                    <li>
+                        On hover off, the initial image slides back, reverse direction of the hover on transition
+                    </li>
+                    <li>
+                        Quick shop button fades in as an overlay over the product image and fades off as user hovers off
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on or off color option
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        On hover, color option/icon transitions to a slightly larger scale
+                    </li>
+                    <li>
+                        Off hover, color option transitions back to the default scale
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Quick shop button fades to a different color and transitions to a slightly larger scale
+                    </li>
+                    <li>
+                        On hover off, color fades back to default color and scales back down to default size
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal with more information and buttons opens on click
+                    </li>
+                    <li>
+                        modal fades in and scales from smaller to larger quickly
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks a color option
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Color icon scales back to default size with a bold border fades into view
+                    </li>
+                    <li>
+                        Product image transitons to product image assigned to that color
+                    </li>
+                    <li>
+                        Color selected will stay selected, if user opens quick shop modal
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks on exit quick shop modal
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal closes by fading out and scaling down quickly
+                    </li>
+                    <li>
+                        If color was changed within modal, then color selection correspondes to product tile once modal is closed
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on quick shop modal buttons
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal buttons fades background color and text color to reverse
+                    </li>
+                    <li>
+                        On hover off, the transition reverses and button fades back to default background color and text color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on favorite/heart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Icon fades to a different fill (50%) color with a small scale up to a slightly larger size
+                    </li>
+                    <li>
+                        On hover off, the icon fades to default fill color and scales back down to default size
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks on favorite/heart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Icon fades back to different fill (100%) color and scales back to default size
+                    </li>
+                    <li>
+                        If the icon is already selected, clicking it again will deselect it, and the icon will scale down and fade back to default / unselected color and scale back to default size
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Feedback
+                </h1>
+                <p>
+                    <b>
+                        User hovers on or off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image quickly slides simultaneously while another image takes its place
+                    </li>
+                    <li>
+                        On hover off, the initial image slides back, reverse direction of the hover on transition
+                    </li>
+                    <li>
+                        Quick shop button fades in as an overlay over the product image and fades off as user hovers off
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on or off color option
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        On hover, color option/icon transitions to a slightly larger scale
+                    </li>
+                    <li>
+                        Off hover, color option transitions back to the default scale
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Quick shop button fades to a different color and transitions to a slightly larger scale
+                    </li>
+                    <li>
+                        On hover off, color fades back to default color and scales back down to default size
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal with more information and buttons opens on click
+                    </li>
+                    <li>
+                        modal fades in and scales from smaller to larger quickly
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks a color option
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Color icon scales back to default size with a bold border fades into view
+                    </li>
+                    <li>
+                        Product image transitons to product image assigned to that color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks on exit quick shop modal
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal closes by fading out and scaling down quickly
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on quick shop modal buttons
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal buttons fades background color and text color to reverse
+                    </li>
+                    <li>
+                        On hover off, the transition reverses and button fades back to default background color and text color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User hovers on favorite/heart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Icon fades to a different fill (50%) color with a small scale up to a slightly larger size
+                    </li>
+                    <li>
+                        On hover off, the icon fades to default fill color and scales back down to default size
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                    User clicks on favorite/heart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Icon fades back to different fill (100%) color and scales back to default size
+                    </li>
+                    <li>
+                        If the icon is already selected, clicking it again will deselect it, and the icon will scale down and fade back to default / unselected color and scale back to default size
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Loops &amp; Modes
+                </h1>
+                <ul>
+                    <li>
+                        Modal will appear once user clicks on quick shop and will disappear once user click exit on modal
+                    </li>
+                    <li>
+                        Modal will contain product name, price, image, available colors, available sizes, and add to cart button
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
