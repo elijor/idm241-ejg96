@@ -8,8 +8,15 @@
   </head>
   <body>
     <div class="whole-container">
-        <img src="imgs/idm241-image1.png" alt="this image shows three product tiles with red outlines pointing out interactive elements">
-        <img src="imgs/idm241-image2.png" alt="this image shows the quick shop modal red outlines pointing out interactive elements">
+        <picture>
+            <source media="(min-width:1200px)" srcset="imgs/idm241-image1.png">
+            <source media="(min-width:750px)" srcset="imgs/idm241-image1-tab.png">
+            <img src="imgs/idm241-image1-mob.png" alt="this image shows three product tiles with red outlines pointing out interactive elements">
+          </picture>
+          <picture>
+            <source media="(min-width:1200px)" srcset="imgs/idm241-image2.png">
+            <img src="imgs/idm241-image2-tab.png" alt="this image shows the quick shop modal red outlines pointing out interactive elements">
+          </picture>
         <div class="urlholder">
            <h1> <a target="_blank" href="https://www.urbanoutfitters.com/mens-jackets"> https://www.urbanoutfitters.com/mens-jackets </a></h1>
         </div>
@@ -24,9 +31,6 @@
                     </li>
                     <li>
                         User hovers on or off color option
-                    </li>
-                    <li>
-                        User hovers quick shop button
                     </li>
                     <li>
                         User clicks quick shop button
@@ -59,13 +63,13 @@
                 </p>
                 <ul>
                     <li>
-                        Initial product image quickly slides simultaneously while another image takes its place
+                        Initial product image instantly changes to another product view (either on model or product view)
                     </li>
                     <li>
-                        On hover off, the initial image slides back, reverse direction of the hover on transition
+                        On hover off, new image instantly changes back to default image that was present before hover
                     </li>
                     <li>
-                        Quick shop button fades in as an overlay over the product image and fades off as user hovers off
+                        Quick shop button and favorite button overlays on top of new product image and on hover off, they instantly disappear
                     </li>
                 </ul>
                 <p>
@@ -75,23 +79,10 @@
                 </p>
                 <ul>
                     <li>
-                        On hover, color option/icon transitions to a slightly larger scale
+                        On hover, instant light gray stroke appears around color option
                     </li>
                     <li>
-                        Off hover, color option transitions back to the default scale
-                    </li>
-                </ul>
-                <p>
-                    <b>
-                    User hovers quick shop button
-                    </b>
-                </p>
-                <ul>
-                    <li>
-                        Quick shop button fades to a different color and transitions to a slightly larger scale
-                    </li>
-                    <li>
-                        On hover off, color fades back to default color and scales back down to default size
+                        Off hover, instant light gray stroke disappears around color option
                     </li>
                 </ul>
                 <p>
@@ -101,10 +92,10 @@
                 </p>
                 <ul>
                     <li>
-                        modal with more information and buttons opens on click
+                        modal with more information and buttons quickly fades in and scales up to default size on click
                     </li>
                     <li>
-                        modal fades in and scales from smaller to larger quickly
+                        Before information loads, modal is completely white with simple loading animation (grey small circles that form a circular shape, while one small grey circle becomes darker for a very small amount of time then the one next to it does and same and repeats until information is loaded)
                     </li>
                 </ul>
                 <p>
@@ -114,10 +105,10 @@
                 </p>
                 <ul>
                     <li>
-                        Color icon scales back to default size with a bold border fades into view
+                        On click, product image changes to an image of the product variant in that color
                     </li>
                     <li>
-                        Product image transitons to product image assigned to that color
+                        Light grey stroke changes to black stroke of same stroke weight instantly on click
                     </li>
                     <li>
                         Color selected will stay selected, if user opens quick shop modal
@@ -125,12 +116,12 @@
                 </ul>
                 <p>
                     <b>
-                    User clicks on exit quick shop modal
+                        User clicks on exit quick shop modal
                     </b>
                 </p>
                 <ul>
                     <li>
-                        modal closes by fading out and scaling down quickly
+                        modal closes instantly
                     </li>
                     <li>
                         If color was changed within modal, then color selection correspondes to product tile once modal is closed
@@ -138,15 +129,15 @@
                 </ul>
                 <p>
                     <b>
-                    User hovers on quick shop modal buttons
+                        User hovers on quick shop modal buttons
                     </b>
                 </p>
                 <ul>
                     <li>
-                        modal buttons fades background color and text color to reverse
+                        modal buttons fade to less saturated color
                     </li>
                     <li>
-                        On hover off, the transition reverses and button fades back to default background color and text color
+                        On hover off, modal buttons fade back to default full saturated color
                     </li>
                 </ul>
                 <p>
@@ -156,10 +147,10 @@
                 </p>
                 <ul>
                     <li>
-                        Icon fades to a different fill (50%) color with a small scale up to a slightly larger size
+                        heart icon instantly changes from black stroke to grey stroke
                     </li>
                     <li>
-                        On hover off, the icon fades to default fill color and scales back down to default size
+                        heart icon instantly changes from grey stroke back to default black stroke
                     </li>
                 </ul>
                 <p>
@@ -169,10 +160,10 @@
                 </p>
                 <ul>
                     <li>
-                        Icon fades back to different fill (100%) color and scales back to default size
+                        If unfavorited, on click the heart instantly fills with the stroke color (grey on hover and black off hover) with no apparent stroke color
                     </li>
                     <li>
-                        If the icon is already selected, clicking it again will deselect it, and the icon will scale down and fade back to default / unselected color and scale back to default size
+                        If favorited, on click the heart instantly reverts back to white fill and default stroke color (grey stroke on hover and black stroke off of hover)
                     </li>
                 </ul>
             </div>
@@ -187,13 +178,13 @@
                 </p>
                 <ul>
                     <li>
-                        Initial product image quickly slides simultaneously while another image takes its place
+                        Initial product image instantly changes to another product view (either on model or product view)
                     </li>
                     <li>
-                        On hover off, the initial image slides back, reverse direction of the hover on transition
+                        On hover off, new image instantly changes back to default image that was present before hover
                     </li>
                     <li>
-                        Quick shop button fades in as an overlay over the product image and fades off as user hovers off
+                        Quick shop button and favorite button overlays on top of new product image and on hover off, they instantly disappear
                     </li>
                 </ul>
                 <p>
@@ -203,23 +194,10 @@
                 </p>
                 <ul>
                     <li>
-                        On hover, color option/icon transitions to a slightly larger scale
+                        On hover, instant light gray stroke appears around color option
                     </li>
                     <li>
-                        Off hover, color option transitions back to the default scale
-                    </li>
-                </ul>
-                <p>
-                    <b>
-                    User hovers quick shop button
-                    </b>
-                </p>
-                <ul>
-                    <li>
-                        Quick shop button fades to a different color and transitions to a slightly larger scale
-                    </li>
-                    <li>
-                        On hover off, color fades back to default color and scales back down to default size
+                        Off hover, instant light gray stroke disappears around color option
                     </li>
                 </ul>
                 <p>
@@ -229,10 +207,10 @@
                 </p>
                 <ul>
                     <li>
-                        modal with more information and buttons opens on click
+                        modal with more information and buttons quickly fades in and scales up to default size on click
                     </li>
                     <li>
-                        modal fades in and scales from smaller to larger quickly
+                        Before information loads, modal is completely white with simple loading animation (grey small circles that form a circular shape, while one small grey circle becomes darker for a very small amount of time then the one next to it does and same and repeats until information is loaded)
                     </li>
                 </ul>
                 <p>
@@ -242,33 +220,39 @@
                 </p>
                 <ul>
                     <li>
-                        Color icon scales back to default size with a bold border fades into view
+                        On click, product image changes to an image of the product variant in that color
                     </li>
                     <li>
-                        Product image transitons to product image assigned to that color
+                        Light grey stroke changes to black stroke of same stroke weight instantly on click
                     </li>
-                </ul>
-                <p>
-                    <b>
-                    User clicks on exit quick shop modal
-                    </b>
-                </p>
-                <ul>
                     <li>
-                        modal closes by fading out and scaling down quickly
+                        Color selected will stay selected, if user opens quick shop modal
                     </li>
                 </ul>
                 <p>
                     <b>
-                    User hovers on quick shop modal buttons
+                        User clicks on exit quick shop modal
                     </b>
                 </p>
                 <ul>
                     <li>
-                        modal buttons fades background color and text color to reverse
+                        modal closes instantly
                     </li>
                     <li>
-                        On hover off, the transition reverses and button fades back to default background color and text color
+                        If color was changed within modal, then color selection correspondes to product tile once modal is closed
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on quick shop modal buttons
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        modal buttons fade to less saturated color
+                    </li>
+                    <li>
+                        On hover off, modal buttons fade back to default full saturated color
                     </li>
                 </ul>
                 <p>
@@ -278,10 +262,10 @@
                 </p>
                 <ul>
                     <li>
-                        Icon fades to a different fill (50%) color with a small scale up to a slightly larger size
+                        heart icon instantly changes from black stroke to grey stroke
                     </li>
                     <li>
-                        On hover off, the icon fades to default fill color and scales back down to default size
+                        heart icon instantly changes from grey stroke back to default black stroke
                     </li>
                 </ul>
                 <p>
@@ -291,10 +275,10 @@
                 </p>
                 <ul>
                     <li>
-                        Icon fades back to different fill (100%) color and scales back to default size
+                        If unfavorited, on click the heart instantly fills with the stroke color (grey on hover and black off hover) with no apparent stroke color
                     </li>
                     <li>
-                        If the icon is already selected, clicking it again will deselect it, and the icon will scale down and fade back to default / unselected color and scale back to default size
+                        If favorited, on click the heart instantly reverts back to white fill and default stroke color (grey stroke on hover and black stroke off of hover)
                     </li>
                 </ul>
             </div>
@@ -304,7 +288,7 @@
                 </h1>
                 <ul>
                     <li>
-                        Modal will appear once user clicks on quick shop and will disappear once user click exit on modal
+                        Modal appears once user clicks on quick shop and will disappear once user clicks exit on modal
                     </li>
                     <li>
                         Modal will contain product name, price, image, available colors, available sizes, and add to cart button
