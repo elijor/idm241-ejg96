@@ -1,13 +1,43 @@
 * {
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: "league_gothic";
+    src:
+      local("League_Gothic"),
+      url("custom-fonts/League_Gothic.otf") format("opentype"),
+  }
+
 .whole-container {
     display: flex;
     width: 90%;
-    margin: 10% auto;
+    margin: 5% auto;
     flex-direction: column;
 }
-.urlholder, .con h1 {
+img {
+    max-width: 100%;
+}
+.stages {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.stages div {
+    width: 45%;
+    display: block;
+}
+.title {
+    text-align: center;
+    font-size: 80px;
+    font-family: league_gothic;
+    letter-spacing: 4px;
+}
+p, li, h1 a, h2 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.urlholder, .con h1, h2 {
     text-align: center;
 }
 picture img {
@@ -15,13 +45,28 @@ picture img {
     
 }
 .urlholder h1 {
-    word-break: break-all;
+    background-color: rgb(188, 206, 234);
+    padding: 10px;
+    color: black;
+    display: inline-block;
 }
 
+.urlholder h1 a {
+    color: black;
+    margin-bottom: 50px;
+}
+
+.urlholder h1 a:hover {
+    color: dimgray;
+}
+.urlholder h1:hover {
+background-color:rgba(188, 206, 234, .7) ;
+}
 .trfl {
     display: flex;
     flex-direction: row;
    justify-content: space-between;
+   gap: 2%;
 }
 
 .con {
@@ -31,6 +76,11 @@ picture img {
     padding: 20px;
 }
 
+.con h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+
+}
 @media screen and (max-width: 1240px) {
     .whole-container {
         width: 95%;
@@ -52,6 +102,15 @@ picture img {
 @media screen and (max-width: 750px) { 
     .urlholder h1 {
         font-size: 24px;
+    }
+    .stages {
+        flex-direction: column;
+    }
+    .stages div {
+        width: 100%;
+    }
+    .title {
+        font-size: 60px;
     }
 }
 @media screen and (max-width: 550px) { 
