@@ -42,7 +42,9 @@ p, li, h1 a, h2 {
 }
 picture img {
     width: 100%; 
-    
+}
+h2 {
+    color: #EE0000;
 }
 .urlholder h1 {
     background-color: rgb(188, 206, 234);
