@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Alpha Build - Urban Outiftters</title>
+  </head>
+  <body>
+    <div class="whole-container">
+        <div class="microintercon">
+            <div class="prodcon">
+                <div class="prodimg">
+                    <img src="imgs/img1a-model.webp" alt="placeholder">
+                    <h3 class="qs">Quick Shop</h3>
+                    <div class="favbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+                    </div>
+                    <img src="imgs/img1b-prodview.webp" alt="placeholder">
+                </div>
+                <h2 class="shoptitle">
+                    Dickies Eisenhower Unlined Gas Jacket
+                </h2>
+                <h2 class="shoptitle">
+                    $79.00
+                </h2>
+            </div>
+            <div class="prodcon">
+                <div class="prodimg">
+                    <img src="imgs/img2a-model.webp" alt="placeholder">
+                    <h3 class="qs">Quick Shop</h3>
+                    <div class="favbutton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+                    </div>
+                    <img src="imgs/img2b-prodview.webp" alt="placeholder">
+                </div>
+                <h2 class="shoptitle">
+                    UO Big Corduroy Work Shirt
+                </h2>
+                <h2 class="shoptitle">
+                    $79.00
+                </h2>
+            </div>
+            <div class="prodcon">
+            <div class="prodimg">
+                <img src="imgs/img3a-model.webp" alt="placeholder">
+                <h3 class="qs">Quick Shop</h3>
+                <div class="favbutton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+                </div>
+                <img src="imgs/img3b-prodview.webp" alt="placeholder">
+            </div>
+                <h2 class="shoptitle">
+                    BDG Blocked Canvas Jacket
+                </h2>
+                <h2 class="shoptitle">
+                    $89.00
+                </h2>
+            </div>
+        </div>
+        <h1 class="title"> Urban Outfitters Product Tile</h1>
+        <h2 class="subhead"> IDM241 Alpha Build</h2>
+        <div class="urlholder">
+           <h1> <a target="_blank" href="https://www.urbanoutfitters.com/mens-jackets"> Urban Outfitters Product Tiles Original Link </a></h1>
+        </div>
+        <div class="trfl">
+            <div class="con">
+                <h1>
+                    Triggers
+                </h1>
+                <ul>
+                    <li>
+                        User hovers on product image tile
+                    </li>
+                    <li>
+                        User hovers off of product image tile
+                    </li>
+                    <li>
+                        User hovers on favorite heart
+                    </li>
+                    <li>
+                        User hovers off favorite heart
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Rules
+                </h1>
+                <p>
+                    <b>
+                        User hovers on product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image slides to the left while another image slides in from right to take its place in .4 seconds
+                    </li>
+                    <li>
+                        Quick shop bar overlay slides from onscreen left to visible right in .3 seconds
+                    </li>
+                    <li>
+                        Favorite heart scales horizontally from 0 to 100% centrally
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Second product image slides to the right while inital image slides from left to take its place in .4 seconds
+                    </li>
+                    <li>
+                        Quick shop bar overlay slides from right to left in .3 seconds and is not longer visible
+                    </li>
+                    <li>
+                        Favorite heart scales horizontally from 100% to 0 centrally and is no longer visible
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's gray fill fades to black fill in .2 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's black fill fades to gray fill in .2 seconds
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Feedback
+                </h1>
+                <p>
+                    <b>
+                        User hovers on product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image slides to the left while another image slides in from right to take its place in .4 seconds
+                    </li>
+                    <li>
+                        Quick shop bar overlay slides from onscreen left to visible right in .3 seconds
+                    </li>
+                    <li>
+                        Favorite heart scales horizontally from 0 to 100% centrally
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Second product image slides to the right while inital image slides from left to take its place in .4 seconds
+                    </li>
+                    <li>
+                        Quick shop bar overlay slides from right to left in .3 seconds and is not longer visible
+                    </li>
+                    <li>
+                        Favorite heart scales horizontally from 100% to 0 centrally and is no longer visible
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's gray fill fades to black fill in .2 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's black fill fades to gray fill in .2 seconds
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Loops &amp; Modes
+                </h1>
+                <ul>
+                    <li>
+                        The quick shop button overlay and the heart icon appear on top of product image when hover over product image or title/price information
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
