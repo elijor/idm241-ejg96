@@ -47,7 +47,7 @@ img {
     bottom: 0;
     left: -100%;
     padding: 25px 0;
-    transition: 300ms;
+    transition: 400ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -62,18 +62,18 @@ img {
     margin: 20px 0 0 20px;
     height: fit-content;
     width: fit-content;
-    transition: 200ms;
+    transition: 300ms;
     transition-timing-function: ease-in-out;
 }
 
 .prodcon:hover .favbutton {
     transform: scaleX(1);
-    transition: 200ms;
+    transition: 300ms;
     transition-timing-function: ease-in-out;
 }
 
 .favbutton svg {
-    transition: 200ms;
+    transition: 300ms;
     transition-timing-function: ease-in-out;
     fill: dimgray;
 }
@@ -81,7 +81,7 @@ img {
 .favbutton:hover svg {
       /* background-color: rgba(255, 255, 255, .5); */
       fill:black ;
-      transition: 200ms;
+      transition: 300ms;
       transition-timing-function: ease-in-out;
 }
 
@@ -111,13 +111,13 @@ img {
 .prodimg img:last-child {
     z-index: 10;
     left:100%;
-    transition: 400ms;
+    transition: 500ms;
     transition-timing-function: ease-in-out;
 }
 .prodimg img:first-child {
     z-index: 10;
     left:0;
-    transition: 400ms;
+    transition: 500ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -138,7 +138,7 @@ img {
 
 .prodcon:hover .prodimg .qs {
     left:0;
-    transition: 300ms;
+    transition: 400ms;
     transition-timing-function: ease-in-out;
 }
 
@@ -254,7 +254,7 @@ background-color:rgba(188, 206, 234, .7) ;
         font-size: 20px;
     }
     .microintercon .prodcon {
-        width: 65%;
+        width: 75%;
     }
     .microintercon {
         justify-content: center;
