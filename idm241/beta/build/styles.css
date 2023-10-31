@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "league_gothic";
+    src:
+      local("League_Gothic"),
+      url("custom-fonts/League_Gothic.otf") format("opentype"),
+  }
+
+.whole-container {
+    display: flex;
+    width: 90%;
+    margin: 5% auto;
+    flex-direction: column;
+}
+img {
+    max-width: 100%;
+}
+.stages {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.stages div {
+    width: 45%;
+    display: block;
+}
+
+.shoptitle {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    font-weight: 500;
+}
+
+.qs {
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    color: black;
+    z-index: 11;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    padding: 25px 0;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+.favbutton {
+    z-index: 12;
+    /* background-color: rgba(255, 255, 255, .5); */
+    position: absolute;
+    transform: scaleX(0);
+    height: fit-content;
+    /* padding: 10px; */
+    margin: 20px 0 0 20px;
+    height: fit-content;
+    width: fit-content;
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon:hover .favbutton {
+    transform: scaleX(1);
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.favbutton svg {
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+    fill: dimgray;
+}
+
+.favbutton:hover svg {
+      /* background-color: rgba(255, 255, 255, .5); */
+      fill:black ;
+      transition: 300ms;
+      transition-timing-function: ease-in-out;
+}
+
+.microintercon {
+    margin: 50px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.prodimg {
+    overflow: hidden;
+    width:100%;
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.prodimg img {
+    position: absolute;
+}
+
+.prodimg img:first-of-type {
+    left: 0;
+}
+
+.prodimg img:last-child {
+    z-index: 10;
+    left:100%;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+}
+.prodimg img:first-child {
+    z-index: 10;
+    left:0;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon:hover {
+    cursor: pointer;
+}
+
+.prodcon:hover .prodimg img:last-child {
+    z-index: 10;
+    left: 0%;
+
+}
+
+.prodcon:hover .prodimg img:first-child {
+    z-index: 1;
+    left: -100%;
+}
+
+.prodcon:hover .prodimg .qs {
+    left:0;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon:hover  .shoptitle:first-of-type {
+    color: rgb(79, 91, 111);
+}
+.prodcon {
+    width: 30%;
+}
+.title {
+    text-align: center;
+    font-size: 80px;
+    font-family: league_gothic;
+    letter-spacing: 4px;
+    margin: 0 0 50px 0;
+}
+p, li, h1 a, h2 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.urlholder, .con h1, h2 {
+    text-align: center;
+}
+picture img {
+    width: 100%; 
+}
+h2.subhead {
+    color: #EE0000;
+    margin: 0 0 35px;
+}
+.urlholder h1 {
+    background-color: rgb(188, 206, 234);
+    padding: 10px;
+    color: black;
+    display: inline-block;
+}
+
+.urlholder h1 a {
+    color: black;
+    margin-bottom: 50px;
+}
+
+.urlholder h1 a:hover {
+    color: dimgray;
+}
+.urlholder h1:hover {
+background-color:rgba(188, 206, 234, .7) ;
+}
+.trfl {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   gap: 2%;
+}
+
+.con {
+    width: 25%;
+    border-style: solid;
+    border-color: dimgray;
+    padding: 20px;
+}
+
+.con h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+
+}
+@media screen and (max-width: 1240px) {
+    .whole-container {
+        width: 95%;
+    }
+    .con {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 880px) { 
+    .trfl .con {
+        width: 48%;
+        margin-bottom: 10%;
+    }
+    .trfl {
+        flex-wrap: wrap;
+    }
+
+    .microintercon {
+        flex-wrap: wrap;
+    }
+
+    .microintercon .prodcon {
+        width: 45%;
+       margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 750px) { 
+    .urlholder h1 {
+        font-size: 24px;
+    }
+    .stages {
+        flex-direction: column;
+    }
+    .stages div {
+        width: 100%;
+    }
+    .title {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 550px) { 
+    .trfl .con {
+        width: 100%;
+    }
+    .urlholder h1 {
+        font-size: 20px;
+    }
+    .microintercon .prodcon {
+        width: 75%;
+    }
+    .microintercon {
+        justify-content: center;
+        /* margin: 0 auto; */
+    }
+}

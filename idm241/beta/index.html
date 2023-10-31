@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Beta Description</title>
+  </head>
+  <body>
+    <div class="whole-container">
+        <h1 class="title"> Urban Outfitters Product Tile</h1>
+        <h2> IDM241 Beta Description</h2>
+
+        <!-- <picture>
+            <source media="(min-width:1200px)" srcset="imgs/idm241-image1.png">
+            <source media="(min-width:750px)" srcset="imgs/idm241-image1-tab.png">
+            <img src="imgs/idm241-image1-mob.png" alt="this image shows three product tiles with red outlines pointing out interactive elements">
+          </picture> -->
+          <!-- <picture>
+            <source media="(min-width:1200px)" srcset="imgs/idm241-image2.png">
+            <img src="imgs/idm241-image2-tab.png" alt="this image shows the quick shop modal red outlines pointing out interactive elements">
+          </picture> -->
+        <div class="urlholder">
+           <h1> <a target="_blank" href="https://www.urbanoutfitters.com/mens-jackets"> Urban Outfitters Product Tiles Link </a></h1>
+        </div>
+        <div class="trfl">
+            <div class="con">
+                <h1>
+                    Triggers
+                </h1>
+                <ul>
+                    <li>
+                        User hovers on product image tile
+                    </li>
+                    <li>
+                        User hovers off of product image tile
+                    </li>
+                    <li>
+                        User hovers on favorite heart
+                    </li>
+                    <li>
+                        User hovers off favorite heart
+                    </li>
+                    <li>
+                        User clicks on quick shop button
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Rules
+                </h1>
+                <p>
+                    <b>
+                        User hovers on product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image instantly changes to another product view (either on model or product view)
+                    </li>
+                    <li>
+                        Quick shop bar/button and favorite button instantly overlays on top of new product image
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        New image instantly changes back to default image that was present before hover
+                    </li>
+                    <li>
+                        Quick shop bar/button and favorite button instantly disappears from product image
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's gray fill fades to black fill in .3 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's black fill fades to gray fill in .3 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Modal containing item information, add to cart button, and exit button expands from center to full size of 70% of screen width and fades in from 0% to 100% opacity
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Feedback
+                </h1>
+                <p>
+                    <b>
+                        User hovers on product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Initial product image instantly changes to another product view (either on model or product view)
+                    </li>
+                    <li>
+                        Quick shop bar/button and favorite button instantly overlays on top of new product image
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off of product image tile
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        New image instantly changes back to default image that was present before hover
+                    </li>
+                    <li>
+                        Quick shop bar/button and favorite button instantly disappears from product image
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's gray fill fades to black fill in .3 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon's black fill fades to gray fill in .3 seconds
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Modal containing item information, add to cart button, and exit button expands from center to full size of 70% of screen width and fades in from 0% to 100% opacity
+                    </li>
+                </ul>
+            </div>
+            <div class="con">
+                <h1>
+                    Loops &amp; Modes
+                </h1>
+                <p>
+                    <b>
+                        Loops
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        None
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        Modes
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon on product image tile hover
+                    </li>
+                    <li>
+                        Quick shop button overlay on product image tile hover
+                    </li>
+                    <li>
+                        Quick shop modal with product information including sizes, reviews, add to cart options when user clicks quick shop button
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="stages">
+            <div>
+                <h2>
+                    Stage 1 - Default
+                </h2>
+                <img class="stage" src="imgs/idm241-default1.png" alt="a product tile showing default state ">
+            </div>
+            <div>
+                <h2>
+                    Stage 2 - On Hover
+                </h2>
+                <img class="stage" src="imgs/idm241-hover1.png" alt="a product tile showing on hover state">
+            </div>
+        </div>
+        <div class="stages">
+            <div>
+                <h2>
+                    Stage 1 - Default
+                </h2>
+                <img class="stage" src="imgs/idm241-default2.png" alt="a product tile showing default state ">
+            </div>
+            <div>
+                <h2>
+                    Stage 2 - On Hover
+                </h2>
+                <img class="stage" src="imgs/idm241-hover2.png" alt="a product tile showing on hover state">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
