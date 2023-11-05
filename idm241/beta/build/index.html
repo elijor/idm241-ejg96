@@ -14,7 +14,9 @@
             <div class="prodcon">
                 <div class="prodimg">
                     <img src="imgs/img1a-model.webp" alt="placeholder">
-                    <h3 class="qs">Quick Shop</h3>
+                    <h3 class="qs">Quick Shop
+                        <span onclick="openModal1()" class="leftqs"></span>
+                    </h3>
                     <div class="favbutton">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
@@ -30,7 +32,9 @@
             <div class="prodcon">
                 <div class="prodimg">
                     <img src="imgs/img2a-model.webp" alt="placeholder">
-                    <h3 class="qs">Quick Shop</h3>
+                    <h3 class="qs">Quick Shop
+                        <span class="leftqs" onclick="openModal2()"></span>
+                    </h3>
                     <div class="favbutton">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
@@ -46,7 +50,9 @@
             <div class="prodcon">
             <div class="prodimg">
                 <img src="imgs/img3a-model.webp" alt="placeholder">
-                <h3 class="qs">Quick Shop</h3>
+                <h3 class="qs">Quick Shop
+                    <span onclick="openModal3()" class="leftqs"></span>
+                </h3>
                 <div class="favbutton">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                 </div>
@@ -60,6 +66,61 @@
                 </h2>
             </div>
         </div>
+        <div class="modal-b hiddenmodal-b">
+            <div class="modal hiddenmodal">
+                <div id="modalimg">
+                    <img src="imgs/img1b-prodview.webp" alt="placeholder">
+                </div>
+                <div id="modaltext">
+                    <div>
+                        <h1 id="modaltitle">
+                            Dickies Eisenhower Unlined Gas Jacket
+                        </h1>
+                        <h1 id="modalprice" class="unbold">
+                            $79.00
+                        </h1>
+                    </div>
+                    <div class="sizegroup">
+                        <h1 class="unbold">
+                            Size
+                        </h1>
+                        <div class="sizebuttons">
+                            <button type="button">
+                                XS
+                            </button>
+                            <button type="button">
+                                S
+                            </button>
+                            <button type="button">
+                                M
+                            </button>
+                            <button type="button">
+                                L
+                            </button>
+                            <button type="button">
+                                XL
+                            </button>
+                        </div>
+                    </div>
+                    <div class="halfcart">
+                        <div class="quangroup">
+                            <h1 class="unbold">
+                                Quantity
+                            </h1>
+                            <div class="countercon">
+                                <button id="decrementButton" type="button"> -</button>
+                                <h1><span id="counter">1</span></h1>
+                                <button id="incrementButton" type="button"> +</button>
+                            </div>
+                        </div>
+                        <button class="atc" type="button">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <span  onclick=" closeModal()" class="close">&times;</span>
+            </div>
+        </div>
 
         <div class="urlholder">
            <h1> <a target="_blank" href="https://www.urbanoutfitters.com/mens-jackets"> Urban Outfitters Product Tiles Original Link </a></h1>
@@ -71,16 +132,34 @@
                 </h1>
                 <ul>
                     <li>
-                        User hovers on product image tile
+                        User hovers on/off product image tile
                     </li>
-                    <li>
+                    <!-- <li>
                         User hovers off of product image tile
-                    </li>
+                    </li> -->
                     <li>
-                        User hovers on favorite heart
+                        User hovers on/off favorite heart
                     </li>
-                    <li>
+                    <!-- <li>
                         User hovers off favorite heart
+                    </li> -->
+                    <li>
+                        User hovers on/off quick shop button
+                    </li>
+                    <!-- <li>
+                        User hovers off quick shop button
+                    </li> -->
+                    <li>
+                        User clicks on quick shop button
+                    </li>
+                    <li>
+                        User hovers on/off size or quantity option buttons
+                    </li>
+                    <li>
+                        User clicks on quantity option buttons
+                    </li>
+                    <li>
+                        User clicks on modal exit button
                     </li>
                 </ul>
             </div>
@@ -95,19 +174,16 @@
                 </p>
                 <ul>
                     <li>
-                        Cursor change from default arrow to pointer
+                        Initial product image slides to the left while another image slides in from right to replace it
                     </li>
                     <li>
-                        Initial product image slides to the left while another image slides in from right to take its place in .5 seconds
-                    </li>
-                    <li>
-                        Quick shop bar overlay slides from onscreen left to visible right in .4 seconds
+                        Quick shop bar overlay slides from off screen left to visible right
                     </li>
                     <li>
                         Favorite heart scales horizontally from 0 to 100% centrally
                     </li>
                     <li>
-                        Product title quickly fades in .3 seconds from a black color to blue gray font color
+                        Product title quickly fades from a black color to blue gray font color
                     </li>
                 </ul>
                 <p>
@@ -117,19 +193,16 @@
                 </p>
                 <ul>
                     <li>
-                        Cursor change from pointer to default arrow
+                        Second product image slides to the right while inital image slides from left to take its place
                     </li>
                     <li>
-                        Second product image slides to the right while inital image slides from left to take its place in .5 seconds
-                    </li>
-                    <li>
-                        Quick shop bar overlay slides from right to left in .4 seconds and is not longer visible
+                        Quick shop bar overlay slides from right to left and is no longer visible
                     </li>
                     <li>
                         Favorite heart scales horizontally from 100% to 0 centrally and is no longer visible
                     </li>
                     <li>
-                        Product title quickly fades in .3 seconds from a blue gray color back to black font color
+                        Product title quickly fades from a blue gray color back to black font color
                     </li>
                 </ul>
                 <p>
@@ -139,7 +212,10 @@
                 </p>
                 <ul>
                     <li>
-                        Heart icon's gray fill fades to black fill in .3 seconds
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Heart icon's gray fill fades to black fill
                     </li>
                 </ul>
                 <p>
@@ -149,7 +225,95 @@
                 </p>
                 <ul>
                     <li>
-                        Heart icon's black fill fades to gray fill in .3 seconds
+                        User's cursor changes back from hand to default arrow
+                    </li>
+                    <li>
+                        Heart icon's black fill fades to gray fill
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Overlay slides over from left to right to invert background color and text color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from hand to default arrow
+                    </li>
+                    <li>
+                        Overlay slides back from right to left and the inverted layer is hidden, revealing the default black text and transparent white background color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Modal containing product information along with new information (size options, quantity options, exit button, and add to cart button) expands in a horizontal direction from center
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on any size / quantity option button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Black background color moves left to right as the black text fades to white
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off any size / quantity option button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from hand to default arrow
+                    </li>
+                    <li>
+                        Black background color moves right to left and is followed by the default white background color as the white text fades back to default black text
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quantity option buttons
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        The quantity instantly will increase or decrase
+                    </li>
+                    <li>
+                        The number will remain within the maximum 5 and the minimum 1
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on modal exit button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        The modal instantly disappears
                     </li>
                 </ul>
             </div>
@@ -164,19 +328,16 @@
                 </p>
                 <ul>
                     <li>
-                        Cursor change from default arrow to pointer
+                        Initial product image slides to the left while another image slides in from right to replace it
                     </li>
                     <li>
-                        Initial product image slides to the left while another image slides in from right to take its place in .5 seconds
-                    </li>
-                    <li>
-                        Quick shop bar overlay slides from onscreen left to visible right in .4 seconds
+                        Quick shop bar overlay slides from off screen left to visible right
                     </li>
                     <li>
                         Favorite heart scales horizontally from 0 to 100% centrally
                     </li>
                     <li>
-                        Product title quickly fades in .3 seconds from a black color to blue gray font color
+                        Product title quickly fades from a black color to blue gray font color
                     </li>
                 </ul>
                 <p>
@@ -186,19 +347,16 @@
                 </p>
                 <ul>
                     <li>
-                        Cursor change from pointer to default arrow
+                        Second product image slides to the right while inital image slides from left to take its place
                     </li>
                     <li>
-                        Second product image slides to the right while inital image slides from left to take its place in .5 seconds
-                    </li>
-                    <li>
-                        Quick shop bar overlay slides from right to left in .4 seconds and is not longer visible
+                        Quick shop bar overlay slides from right to left and is no longer visible
                     </li>
                     <li>
                         Favorite heart scales horizontally from 100% to 0 centrally and is no longer visible
                     </li>
                     <li>
-                        Product title quickly fades in .3 seconds from a blue gray color back to black font color
+                        Product title quickly fades from a blue gray color back to black font color
                     </li>
                 </ul>
                 <p>
@@ -208,7 +366,10 @@
                 </p>
                 <ul>
                     <li>
-                        Heart icon's gray fill fades to black fill in .3 seconds
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Heart icon's gray fill fades to black fill
                     </li>
                 </ul>
                 <p>
@@ -218,7 +379,95 @@
                 </p>
                 <ul>
                     <li>
-                        Heart icon's black fill fades to gray fill in .3 seconds
+                        User's cursor changes back from hand to default arrow
+                    </li>
+                    <li>
+                        Heart icon's black fill fades to gray fill
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Overlay slides over from left to right to invert background color and text color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from hand to default arrow
+                    </li>
+                    <li>
+                        Overlay slides back from right to left and the inverted layer is hidden, revealing the default black text and transparent white background color
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quick shop button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Modal containing product information along with new information (size options, quantity options, exit button, and add to cart button) expands in a horizontal direction from center
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on any size / quantity option button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from default arrow to hand
+                    </li>
+                    <li>
+                        Black background color moves left to right as the black text fades to white
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers off any size / quantity option button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        User's cursor changes from hand to default arrow
+                    </li>
+                    <li>
+                        Black background color moves right to left and is followed by the default white background color as the white text fades back to default black text
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on quantity option buttons
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        The quantity instantly will increase or decrase
+                    </li>
+                    <li>
+                        The number will remain within the maximum 5 and the minimum 1
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on modal exit button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        The modal instantly disappears
                     </li>
                 </ul>
             </div>
@@ -243,11 +492,24 @@
                 </p>
                 <ul>
                     <li>
-                        The quick shop button overlay and the heart icon appear on top of product image when hover over product image or title/price information
+                        Heart icon / button appears on product image tile hover
+                    </li>
+                    <li>
+                        Quick shop button overlay on product image tile hover
+                    </li>
+                    <li>
+                        5 Size options/buttons in modal upon clicking quick shop
+                    </li>
+                    <li>
+                        Quantity options/buttons and value in modal upon clicking quick shop
+                    </li>
+                    <li>
+                        Add to cart button in modal upon clicking quick shop
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
