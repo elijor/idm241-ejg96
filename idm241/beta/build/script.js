@@ -8,6 +8,12 @@ function updateCounter() {
     counterElement.textContent = counter;
   }
 
+  function resetCounter() {
+    // counterElement.textContent = 1;
+    counter = 1;
+    updateCounter();
+  }
+
 function increment() {
     if (counter < 5) {
         counter++;
@@ -71,4 +77,7 @@ function closeModal() {
     console.log("testing-close");
     mBackground.classList.add("hiddenmodal-b");
     modal.classList.add("hiddenmodal");
+
+    resetCounter();
+    console.log("testing-close-counter1");
 }
