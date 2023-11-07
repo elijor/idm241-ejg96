@@ -50,7 +50,7 @@ function openModal1() {
 
 const modalTitle = document.getElementById("modaltitle");
 const modalPrice = document.getElementById("modalprice");
-const modalImg = document.querySelector("#modalimg img")
+const modalImg = document.querySelector("#modalimg img");
 
 
 function openModal2() {
@@ -77,7 +77,8 @@ function closeModal() {
     console.log("testing-close");
     mBackground.classList.add("hiddenmodal-b");
     modal.classList.add("hiddenmodal");
+    console.log("testing-close-before-reset");
 
     resetCounter();
-    console.log("testing-close-counter1");
+    console.log("testing-close-after-reset");
 }
