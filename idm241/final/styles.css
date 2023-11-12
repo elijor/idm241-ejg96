@@ -1,0 +1,576 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "league_gothic";
+    src:
+      local("League_Gothic"),
+      url("custom-fonts/League_Gothic.otf") format("opentype"),
+  }
+
+.whole-container {
+    display: flex;
+    width: 90%;
+    margin: 5% auto;
+    flex-direction: column;
+}
+img {
+   width: 100%;
+}
+.stages {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.stages div {
+    width: 45%;
+    display: block;
+}
+
+.shoptitle {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    font-weight: 500;
+}
+
+.qs {
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    color: black;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    padding: 25px 0;
+    transition: 400ms;
+    /* transition-timing-function: ease-in-out; */
+    transition-delay: 500ms;
+}
+
+
+.favbutton {
+    z-index: 12;
+    /* background-color: rgba(255, 255, 255, .5); */
+    position: absolute;
+    transform: scaleX(0);
+    height: fit-content;
+    /* padding: 10px; */
+    margin: 20px 0 0 20px;
+    height: fit-content;
+    width: fit-content;
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon:hover .favbutton {
+    transform: scaleX(1);
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.favbutton svg {
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+    fill: dimgray;
+}
+
+.favbutton:hover svg {
+      /* background-color: rgba(255, 255, 255, .5); */
+      fill:black ;
+      transition: 300ms;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+}
+
+.microintercon {
+    margin: 50px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.prodimg {
+    overflow: hidden;
+    width:100%;
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.prodimg img {
+    position: absolute;
+}
+
+.prodimg img:first-of-type {
+    left: 0;
+}
+
+.prodimg img:last-child {
+    z-index: -2;
+    left:100%;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+}
+.prodimg img:first-child {
+    z-index: -2;
+    left:0;
+    transition: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon:hover .prodimg img:last-child {
+    z-index: -2;
+    left: 0%;
+
+}
+
+.prodcon:hover .prodimg img:first-child {
+    z-index: -2;
+    left: -100%;
+}
+
+.prodcon:hover .prodimg .qs {
+    left:0;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.prodcon .prodimg .qs {
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 250ms;
+
+}
+
+.prodcon:hover  .shoptitle:first-of-type {
+    color: rgb(79, 91, 111);
+}
+.prodcon {
+    width: 30%;
+}
+.title {
+    text-align: center;
+    font-size: 80px;
+    font-family: league_gothic;
+    letter-spacing: 4px;
+    margin: 0 0 50px 0;
+}
+p, li, h1 a, h2, h1 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.urlholder, .con h1, h2 {
+    text-align: center;
+}
+picture img {
+    width: 100%; 
+}
+h2.subhead {
+    color: #EE0000;
+    margin: 0 0 35px;
+}
+.urlholder h1 {
+    background-color: rgb(188, 206, 234);
+    padding: 10px;
+    color: black;
+    display: inline-block;
+}
+
+.urlholder h1 a {
+    color: black;
+    margin-bottom: 50px;
+}
+
+.urlholder h1 a:hover {
+    color: dimgray;
+}
+.urlholder h1:hover {
+background-color:rgba(188, 206, 234, .7) ;
+}
+.trfl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.con {
+    width: 25%;
+    border-style: solid;
+    border-color: dimgray;
+    padding: 20px;
+}
+
+.con h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+}
+
+.qs {
+    overflow: hidden;
+    transition-delay: 500ms;
+}
+
+.qs{
+    transition-delay: 500ms;
+}
+
+.leftqs {
+    left: 100%;
+    background-color: #ffffff;
+    /* opacity: 100%; */
+    /* filter: invert(100%); */
+    mix-blend-mode:difference;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    transition-duration: .25s;
+}
+
+/* .qs:hover .leftqs {
+    transition-delay: 100ms;
+} */
+
+.leftqs:hover, .qs:hover {
+    cursor: pointer;
+}
+
+.qs:hover .leftqs, .leftqs:hover {
+    left: 0%;
+    transition-duration: .25s;
+}
+
+.unbold {
+    font-weight: 300;
+}
+
+/*--------------------------------MODAL --------------------------------*/
+
+.modal-b {
+    position: fixed;
+    background-color: #000000c9;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+    transition: opacity 250ms;
+    /* visibility: hidden; */
+    z-index: 15;
+}
+
+.modal {
+    position: relative;
+    background-color: #ffffff;
+    height: max-content;
+    max-height: 80vh;
+    width: 70%;
+    margin: 5% auto;
+    display: flex;
+    padding: 40px;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    transform: scaleX(1);
+    /* transform: scaleY(1); */
+    transform-origin: 50% 0;
+    transition: transform 200ms;
+}
+
+button {
+    background-color: white;
+}
+
+#modalimg {
+    width: calc(40% - 20px);
+}
+
+#modalimg img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+#modaltext {
+    width: calc(60% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#modaltext h1:first-of-type {
+    font-size: 36px;
+}
+
+.sizebuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.sizebuttons button {
+    width: calc(80% / 5);
+    aspect-ratio: 1 / 1;
+    font-size: 36px;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 10px;
+    background-color: white;
+    border-style: solid;
+    border: 2px solid black;
+
+}
+
+button.atc {
+    font-size: 36px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.halfcart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.halfcart > *:first-child {
+    width: 35%;
+}
+
+.halfcart > *:last-child {
+    width: 55%;
+}
+
+.close {
+    position: absolute;
+    color: white;
+    background-color: black;
+    /* border: 2px solid black; */
+    width:50px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    font-size: 36px;
+    left: 97.5%;
+    bottom: 95%;
+    text-align: center;
+    display: block;
+    /* padding: 10px; */
+    border: 2px solid white;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.modal h1 {
+    margin: 0;
+}
+
+.quangroup h1, .sizegroup h1 {
+    margin-bottom: 10px;
+}
+
+.countercon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.countercon button {
+    border: 2px solid black;
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    font-size: 24px;
+}
+
+.sizebuttons button, .countercon button {
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.25s;
+}
+
+.sizebuttons button:before, .countercon button:before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color:  black;
+    transform: scaleX(0);
+    /* transform: scaleY(0); */
+    transform-origin: 0 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.sizebuttons button:hover, .countercon button:hover {
+    color: white;
+    cursor: pointer;
+}
+.sizebuttons button:hover:before, .countercon button:hover:before {
+    transform: scaleX(1);
+    /* transform: scaleY(1); */
+}
+
+.hiddenmodal-b {
+    opacity: 0%;
+    visibility: hidden;
+    transition: opacity 250ms;
+}
+
+.hiddenmodal {
+    transform: scaleX(0);
+    visibility: hidden;
+    transition: transform 200ms;
+}
+
+@media screen and (max-width: 1240px) {
+    .whole-container {
+        width: 95%;
+    }
+    .con {
+        padding: 12px;
+    }
+    .modal button {
+        /* font-size-adjust: .75; */
+        font-size: 24px;
+
+    }
+}
+
+@media screen and (max-width: 1000px) { 
+    .modal {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 900px) { 
+    .trfl .con {
+        width: 90%;
+        margin-bottom: 10%;
+    }
+    .trfl {
+        flex-wrap: wrap;
+    }
+
+    .microintercon {
+        flex-wrap: wrap;
+    }
+
+    .microintercon .prodcon {
+        width: 45%;
+       margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .modal {
+        width: 95%;
+    }
+
+    .close {
+        left: 95%;
+
+    }
+}
+
+@media screen and (max-width: 750px) { 
+    .urlholder h1 {
+        font-size: 24px;
+    }
+    .stages {
+        flex-direction: column;
+    }
+    .stages div {
+        width: 100%;
+    }
+    .title {
+        font-size: 60px;
+    }
+    #modaltext h1:first-of-type, .modal h1{
+        font-size: 28px
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    button.atc {
+        padding: 10px
+    }
+    #modaltext h1:first-of-type, .modal h1{
+        font-size: 24px
+    }
+    .modal button {
+        font-size: 22px
+    }
+    .close {
+        bottom: 92.5%;
+        left: 93.5%;
+    }
+ }
+@media screen and (max-width: 550px) { 
+    .trfl .con {
+        width: 100%;
+    }
+    .urlholder h1 {
+        font-size: 20px;
+    }
+    .microintercon .prodcon {
+        width: 100%;
+    }
+    .microintercon {
+        justify-content: center;
+        /* margin: 0 auto; */
+    }
+    .close {
+        /* left: calc(97.5% - 50px); */
+        left: calc(100% - 50px);
+        bottom: calc(100% - 50px)
+    }
+}
+@media screen and (max-width: 550px) { 
+    .modal {
+        flex-direction: column;
+        height: 95vh;
+        max-height: 100vh;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    #modaltext {
+        width: 100%;
+        height: 35%;
+    }
+    #modalimg {
+        width: 100%;
+        height: 60%;
+        margin: 0 auto;
+    }
+    #modaltext h1:first-of-type, .modal h1{
+        font-size: 24px
+    }
+}
+/* 
+@media screen and (max-width: 420px) {
+    .sizebuttons {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .sizebuttons button {
+        width: 20%;
+    }
+
+ } */
