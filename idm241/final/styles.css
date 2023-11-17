@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    margin: 0;
+}
+
 @font-face {
     font-family: "league_gothic";
     src:
@@ -161,6 +166,7 @@ img {
 }
 p, li, h1 a, h2, h1 {
     font-family: Helvetica, Arial, sans-serif;
+    line-height: 175%;
 }
 .urlholder, .con h1, h2 {
     text-align: center;
@@ -195,13 +201,22 @@ background-color:rgba(188, 206, 234, .7) ;
     flex-direction: row;
     justify-content: space-between;
     gap: 2%;
+    /* column-gap: 2%; */
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .con {
-    width: 25%;
+    width: 48%;
     border-style: solid;
     border-color: dimgray;
     padding: 20px;
+    margin-bottom: 4%;
+}
+
+.con:first-of-type, .con:last-child {
+    width: 100%;
 }
 
 .con h1 {
@@ -459,6 +474,9 @@ button.atc {
     .trfl .con {
         width: 90%;
         margin-bottom: 10%;
+        margin-right: auto;
+        margin-left: auto;
+
     }
     .trfl {
         flex-wrap: wrap;
