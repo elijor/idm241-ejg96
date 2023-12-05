@@ -81,7 +81,18 @@ function closeModal() {
 
     resetCounter();
     console.log("testing-close-after-reset");
-}
+};
+
+function addedtocart() {
+  var textchange = document.getElementById("atc");
+  textchange.classList.add("bold");
+  textchange.innerText = "Added to Cart!";
+  setTimeout(() => {
+    mBackground.classList.add("hiddenmodal-b");
+    textchange.innerText = "Add to Cart";
+    textchange.classList.remove("bold");
+  }, 900);
+};
 
 
 function heartLike() {
@@ -155,6 +166,41 @@ document.addEventListener('DOMContentLoaded', function () {
     sbutton2.classList.remove('selected');
   });
 });
+
+
+var likedElements = document.querySelectorAll('.liked:hover');
+
+likedElements.forEach(function(likedele) {
+  likedele.addEventListener('click', function() {
+    // Add the 'shake' class for horizontal shake animation
+    this.classList.add('shake');
+
+    setTimeout(() => {
+      this.classList.remove('shake');
+      this.classList.add('unliked');
+      this.classList.remove('liked');
+    }, 400);
+  });
+});
+
+var heartElements = document.querySelectorAll('.unliked');
+
+heartElements.forEach(function(heart) {
+  heart.addEventListener('click', function() {
+    // Toggle the bounce class
+    this.classList.toggle('bounce');
+
+    setTimeout(() => {
+
+      this.classList.remove('bounce');
+      this.classList.remove('unliked');
+      this.classList.add('liked');
+    }, 300);
+  });
+});
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   // Assuming you have a variable "atc"

@@ -17,8 +17,8 @@
                     <h3 class="qs">Quick Shop
                         <span onclick="openModal1()" class="leftqs"></span>
                     </h3>
-                    <div onclick="heartLike()" class="favbutton">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+                    <div id="fav1" class="unliked favbutton">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
                     <img src="imgs/img1b-prodview.webp" alt="placeholder">
                 </div>
@@ -35,7 +35,7 @@
                     <h3 class="qs">Quick Shop
                         <span class="leftqs" onclick="openModal2()"></span>
                     </h3>
-                    <div class="favbutton">
+                    <div class="favbutton unliked">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
                     <img src="imgs/img2b-prodview.webp" alt="placeholder">
@@ -53,7 +53,7 @@
                 <h3 class="qs">Quick Shop
                     <span onclick="openModal3()" class="leftqs"></span>
                 </h3>
-                <div class="favbutton">
+                <div class="favbutton unliked">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                 </div>
                 <img src="imgs/img3b-prodview.webp" alt="placeholder">
@@ -113,7 +113,7 @@
                                 <button id="incrementButton" type="button"> +</button>
                             </div>
                         </div>
-                        <button id="atc" class="atc hvr-shutter-in-horizontal" type="button">
+                        <button id="atc" class="atc hvr-shutter-in-horizontal" onclick="addedtocart()" type="button">
                             Add to Cart
                         </button>
                     </div>
@@ -156,7 +156,7 @@
                         User clicks on any size option buttons
                     </li>
                     <li>
-                        User hovers on add to cart button
+                        User hovers on/off add to cart button
                     </li>
                     <li>
                         User clicks on add to cart button
@@ -173,6 +173,51 @@
                 <h1>
                     Rules
                 </h1>
+                <p>
+                    <b>
+                        User hovers off add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Black background is replaced by grey background sliding back in from middle
+                    </li>
+                    <li>
+                        Text fades white to black
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Grey background is replaced by black background sliding in from both sides
+                    </li>
+                    <li>
+                        Text fades black to white
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Product's text changes from "Add to Cart" to "Added to Cart"
+                    </li>
+                    <li>
+                        Text is Bolded
+                    </li>
+                    <li>
+                        Modal closes
+                    </li>
+                    <li>
+                        Database is updated with new item in cart
+                    </li>
+                </ul>
                 <p>
                     <b>
                         User hovers on product image tile
@@ -221,13 +266,12 @@
                         User's cursor changes from default arrow to hand
                     </li>
                     <li>
-                        Heart icon's gray fill fades to black fill
+                        Heart icon's gray fill fades to light pink fill
                     </li>
                 </ul>
                 <p>
                     <b>
-                        User hovers off favorite heart                         User clicks on favorite heart
-
+                        User hovers off favorite heart
                     </b>
                 </p>
                 <ul>
@@ -241,15 +285,17 @@
                 <p>
                     <b>
                         User clicks on favorite heart
-
                     </b>
                 </p>
                 <ul>
                     <li>
-                       Heart icon scales larger and scales back to 100% quickly
+                       Heart icon bounces and fades to maroon
                     </li>
                     <li>
-                        Heart icon remains black after the
+                        Heart icon remains maroon
+                    </li>
+                    <li>
+                        Item is favorited in user's database
                     </li>
                 </ul>
                 <p>
@@ -379,7 +425,7 @@
                 </p>
                 <ul>
                     <li>
-                        The modal instantly disappears
+                        The modal fades to invisibility
                     </li>
                 </ul>
             </div>
@@ -387,6 +433,48 @@
                 <h1>
                     Feedback
                 </h1>
+                <p>
+                    <b>
+                        User hovers off add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Black background is replaced by grey background sliding back in from middle
+                    </li>
+                    <li>
+                        Text fades white to black
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User hovers on add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Grey background is replaced by black background sliding in from both sides
+                    </li>
+                    <li>
+                        Text fades black to white
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on add to cart button
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Product's text changes from "Add to Cart" to "Added to Cart"
+                    </li>
+                    <li>
+                        Text is Bolded
+                    </li>
+                    <li>
+                        Modal closes
+                    </li>
+                </ul>
                 <p>
                     <b>
                         User hovers on product image tile
@@ -449,6 +537,19 @@
                     </li>
                     <li>
                         Heart icon's black fill fades to gray fill
+                    </li>
+                </ul>
+                <p>
+                    <b>
+                        User clicks on favorite heart
+                    </b>
+                </p>
+                <ul>
+                    <li>
+                        Heart icon bounces and fades to maroon
+                    </li>
+                    <li>
+                            Heart icon remains maroon
                     </li>
                 </ul>
                 <p>
@@ -572,7 +673,7 @@
                 </p>
                 <ul>
                     <li>
-                        The modal instantly disappears
+                        The modal fades to invisibility
                     </li>
                 </ul>
             </div>
@@ -614,7 +715,7 @@
                 </ul>
             </div>
             </div>
-            <div class="stages">
+            <!-- <div class="stages">
                 <div>
                     <h2>
                         Stage 1 - Default
@@ -627,7 +728,7 @@
                     </h2>
                     <img class="stage" src="imgs/idm241-hover1.png" alt="a product tile showing on hover state">
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="stages">
                 <div>
                     <h2>

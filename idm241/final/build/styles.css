@@ -116,12 +116,12 @@ img {
     transition-timing-function: ease-in-out;
 }
 
-.favbutton.active {
+/* .favbutton.active {
     animation: 1s wiggle ease 1;
     
-}
+} */
 
-@keyframes wiggle {
+/* @keyframes wiggle {
     0% {
       transform: rotate(-3deg);
       box-shadow: 0 2px 2px rgba(0,0,0,.2);
@@ -142,7 +142,26 @@ img {
       transform: rotate(0);
       box-shadow: 0 2px 2px rgba(0,0,0,.2);
     }
-};
+}; */
+
+.bounce {
+    animation: bounceAnimation 0.25s ease-in-out;
+    fill: maroon;
+    transition: fill .3s;
+  }
+  
+  @keyframes bounceAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    /* 90% {
+      transform: translateY(-5px);
+    } */
+  }
+
 
 .prodcon:hover .favbutton {
     transform: scaleX(1);
@@ -158,11 +177,42 @@ img {
 
 .favbutton:hover svg {
       /* background-color: rgba(255, 255, 255, .5); */
-      fill:black ;
+      fill:#80000050;
       transition: 300ms;
       transition-timing-function: ease-in-out;
       cursor: pointer;
+      animation: none;
 }
+
+.liked svg {
+    fill: #800000;
+    transition: fill .3s;
+}
+
+.liked:hover svg {
+    fill: dimgray;
+    transition: fill .3s;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.shake svg{
+    animation: shakeAnimation 0.4s ease-in-out;
+  }
+  
+  @keyframes shakeAnimation {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 80% {
+      transform: translateX(-5px);
+    }
+    40%, 60% {
+      transform: translateX(5px);
+    }
+  }
 
 .microintercon {
     margin: 50px 0;
@@ -366,8 +416,10 @@ background-color:rgba(188, 206, 234, .7) ;
     flex-wrap: wrap;
     transform: scaleX(1);
     /* transform: scaleY(1); */
+    opacity: 100%;
     transform-origin: 50% 0;
-    transition: transform 200ms;
+    transition: opacity transform 350ms;
+    transition-duration: 350ms;
 }
 
 button {
@@ -633,8 +685,10 @@ button.atc {
 
 .hiddenmodal {
     transform: scaleX(0);
-    visibility: hidden;
-    transition: transform 200ms;
+    /* visibility: hidden; */
+    opacity: 0%;
+    transition: transform 500ms;
+    transition-duration: 500ms;
 }
 
 @media screen and (max-width: 1240px) {
