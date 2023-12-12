@@ -17,7 +17,7 @@
                     <h3 class="qs">Quick Shop
                         <span onclick="openModal1()" class="leftqs"></span>
                     </h3>
-                    <div id="fav1" class="unliked favbutton">
+                    <div id="likeButton" class="unliked favbutton">
                         <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
                     <img src="imgs/img1b-prodview.webp" alt="placeholder">
@@ -35,7 +35,7 @@
                     <h3 class="qs">Quick Shop
                         <span class="leftqs" onclick="openModal2()"></span>
                     </h3>
-                    <div class="favbutton unliked">
+                    <div id="likeButton2" class="favbutton unliked">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                     </div>
                     <img src="imgs/img2b-prodview.webp" alt="placeholder">
@@ -53,7 +53,7 @@
                 <h3 class="qs">Quick Shop
                     <span onclick="openModal3()" class="leftqs"></span>
                 </h3>
-                <div class="favbutton unliked">
+                <div id="likeButton3" class="favbutton unliked">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
                 </div>
                 <img src="imgs/img3b-prodview.webp" alt="placeholder">
@@ -289,13 +289,13 @@
                 </p>
                 <ul>
                     <li>
-                       Heart icon bounces and fades to maroon
+                       If heart is unfavorited, heart icon bounces and fades to maroon and will remain maroon
                     </li>
                     <li>
-                        Heart icon remains maroon
+                        If heart is favorite, heart icon shakes horizontally and fades to default grey and will remain grey
                     </li>
                     <li>
-                        Item is favorited in user's database
+                        Item is favorited or unfavorited in user's database
                     </li>
                 </ul>
                 <p>
@@ -546,11 +546,11 @@
                 </p>
                 <ul>
                     <li>
-                        Heart icon bounces and fades to maroon
-                    </li>
-                    <li>
-                            Heart icon remains maroon
-                    </li>
+                        If heart is unfavorited, heart icon bounces and fades to maroon and will remain maroon
+                     </li>
+                     <li>
+                         If heart is favorite, heart icon shakes horizontally and fades to default grey and will remain grey
+                     </li>
                 </ul>
                 <p>
                     <b>
@@ -794,6 +794,44 @@
                 </picture>
             </div> -->
     </div>
+    <script>
+        // let unliked1 = document.querySelector('unliked');
+        //     unliked1.onclick = function(){
+        //     unliked1.classList.toggle('bounce');
+       
+        //     setTimeout(() => {
+        //     unliked1.classList.remove('bounce');
+        //     unliked1.classList.remove('unliked');
+        //     unliked1.classList.add('liked');
+        // }, 300);
+        // };
+
+        // let liked1 = document.querySelector('liked');
+        //     liked1.onclick = function(){
+        //     liked1.classList.toggle('shake');
+       
+        //     setTimeout(() => {
+        //     liked1.classList.remove('bounce');
+        //     liked1.classList.remove('liked');
+        //     liked1.classList.add('unliked');
+        // }, 300);
+        // };
+//     document.addEventListener('DOMContentLoaded', function () {
+//   const windowsIcon = document.getElementById('windowsIcon');
+
+//   windowsIcon.addEventListener('mouseover', function () {
+//     windowsIcon.classList.add('float-animation');
+//   });
+
+//   windowsIcon.addEventListener('animationiteration', function () {
+//     windowsIcon.classList.remove('float-animation');
+//   });
+// });
+
+    // </script>
+
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"> </script> -->
+
     <script src="script.js"></script>
   </body>
 </html>
